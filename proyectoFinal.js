@@ -25,32 +25,47 @@ if(!isNaN(opcion)){
             if(cuotas === 3 || cuotas === 6 || cuotas === 12){
                 if(cuotas === 3){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
-                    let montoFinal = 1;
-                    while(monto != "ESC"){
-                        montoFinal = monto + ((monto*3.97)/100)
-                        alert("Su monto final es " + (montoFinal) + " debe pagar 6 cuotas de " + (montoFinal)/3)
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
+                    let montoFinal = 0;
+                    while(monto != 0){
+                        montoFinal = monto + ((monto*3.97)/100);
+                        alert("Su monto final es " + (montoFinal) + " debe pagar 3 cuotas de " + (montoFinal)/3);
+                        monto = parseInt(prompt("¿Desea ingresar otro monto? |SI-1|NO-0|"));
+                        if(monto === 1){
+                            monto = parseInt(prompt("Ingrese un monto"));
+                        }else{
+                            alert("Gracias por usar nuestros servicios");
+                        }
                     }
                 }
                 else if(cuotas === 6){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
-                    let montoFinal = 1;
-                    while(monto != "ESC"){
+                    let montoFinal = 0
+                    while(monto != 0){
                         montoFinal = monto + ((monto*7.95)/100)
                         alert("Su monto final es " + (montoFinal) + " debe pagar 6 cuotas de " + (montoFinal)/6)
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
+                        monto = parseInt(prompt("¿Desea ingresar otro monto? |SI-1|NO-0|"));
+                        if(monto === 1){
+                            monto = parseInt(prompt("Ingrese un monto"));
+                        }else{
+                            alert("Gracias por usar nuestros servicios");
+                        }
                     }
                 }
                 else if(cuotas === 12){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
-                    let montoFinal = 1;
-                    while(monto != "ESC"){
+                    let montoFinal = 0
+                    while(monto != 0){
                         montoFinal = monto + ((monto*16.19)/100)
                         alert("Su monto final es " + (montoFinal) + " debe pagar 12 cuotas de " + (montoFinal)/12)
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
+                        monto = parseInt(prompt("¿Desea ingresar otro monto? |SI-1|NO-0|"));
+                        if(monto === 1){
+                            monto = parseInt(prompt("Ingrese un monto"));
+                        }else{
+                            alert("Gracias por usar nuestros servicios");
+                        }
                     }
                 }else{
-                    alert("Error")
+                    alert("Error");
                 }
             }
         }else if(opcion === 2){
@@ -59,37 +74,37 @@ if(!isNaN(opcion)){
                 if(cuotas === 3){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
                     while(monto  != "ESC"){
-                        alert("Su monto final es " + monto + " debe pagar 3 cuotas de " + (monto/3))
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC")
+                        alert("Su monto final es " + monto + " debe pagar 3 cuotas de " + (monto/3));
+                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
                     }
                 }
                 else if(cuotas === 6){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
                     while(monto  != "ESC"){
-                        alert("Su monto final es " + monto + " debe pagar 6 cuotas de " + (monto/6))
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC")
+                        alert("Su monto final es " + monto + " debe pagar 6 cuotas de " + (monto/6));
+                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
                     }
                 }
                 else if(cuotas === 12){
                     let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
                     while(monto  != "ESC"){
-                        alert("Su monto final es " + monto + " debe pagar 12 cuotas de " + (monto/12))
-                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC")
+                        alert("Su monto final es " + monto + " debe pagar 12 cuotas de " + (monto/12));
+                        monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
                     }
                 }else{
-                    alert("Error")
+                    alert("Error");
                 }
             }
         }else if(opcion === 3){
-            let monto = parseInt(prompt("Ingrese el monto que debe abonar"))
-            while(monto != "ESC"){
-                alert("Su monto final es " + monto)
-                montoFinal = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC")
+            let monto = parseInt(prompt("Ingrese el monto que debe abonar"));
+            while(monto != "ESC" && monto != "esc"){
+                alert("Su monto final es " + monto);
+                monto = prompt("¿Desea ingresar otro monto? Si no lo desea digite ESC");
             }
         }
     }else{
-        alert("Opcion invalida") 
+        alert("Opcion invalida");
     }
 }else{
-    alert("ERROR")
+    alert("ERROR");
 }
