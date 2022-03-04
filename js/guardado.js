@@ -90,3 +90,41 @@ if(!isNaN(opcion)){
 }else{
     alert("ERROR");
 }
+
+class Calculo {
+    constructor(monto, cuotas, porcentajeInteres){
+        this.monto = monto;
+        this.cuotas = cuotas;
+        this.interes = parseFloat(porcentajeInteres)
+    }
+
+    calculoIntereses(){
+        return (this.monto + ((this.monto*this.porcentajeInteres)/100))/this.cuotas;
+    }
+
+    calculoSinInteres(){
+        return this.monto/this.cuotas;
+    }
+
+    calculoMontoFinal(){
+        return this.monto
+    }
+}
+
+let arrayMontos = [];
+
+    do{
+        const opcion = parseInt(prompt("Ingrese un monto o digite 0 para salir"));
+        if(opcion === 0){
+            break;
+        }
+        else{
+            montoM = opcion;
+            let cuotasM = parseInt(prompt("Ingrese la cantidad de cuotas en las que desea pagar: |3|6|12|"))
+            let porcentajeInteresM = parseFloat(prompt("Ingrese el porcentaje adecuado: |3-3.97|6-7.95|12-16.19|"))
+            arrayMontos.push(new Calculo(montoM, cuotasM, porcentajeInteresM))
+        }
+    }
+    while(opcion != 0)
+
+console.log(arrayMontos);
