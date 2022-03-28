@@ -4,9 +4,18 @@ let carrito = []
 
 clickButton.forEach(btn => {
     btn.addEventListener('click', addToCarritoItem)
+    btn.addEventListener('click', () =>{
+        Toastify({
+            text: "Producto añadido con exito",
+            duration: 3000
+        }).showToast();
+    })
 })
 
+
+
 function addToCarritoItem(e){
+
     const button = e.target
     const item = button.closest('.card')
     const itemTitle = item.querySelector('.card-title').textContent;
@@ -86,6 +95,14 @@ function removeItemCarrito(e){
             carrito.splice(i, 1)
         }
     }
+
+    tr.addEventListener('click', () =>{
+        Toastify({
+            text: "Producto removido con exito",
+            duration: 3000
+        }).showToast();
+    })
+
     tr.remove()
     CarritoTotal()
     addLocalStorage()
