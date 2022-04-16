@@ -134,7 +134,8 @@ window.onload = function(){
     }
 }
 
-const lista = document.querySelector('#listado')
+//Aquí realicé un fetch pero como la información se mostraba por pantalla decidí no mostrarla
+/*const lista = document.querySelector('section')
 
 fetch('/data.json')
     .then((res) => res.json())
@@ -151,3 +152,4 @@ fetch('/data.json')
     })
 
 console.log(lista)
+*/ 

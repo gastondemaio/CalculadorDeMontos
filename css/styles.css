@@ -1,7 +1,12 @@
 body {
-    background-image: url(/img/depositphotos_48690405-stock-illustration-fast-food-pattern.jpg);
+    background-color:  #fcc404 ;
     background-attachment: fixed;
     text-decoration: black;
+}
+
+body .nav-tabs {
+    box-shadow: 2px 2px 5px #000;
+    opacity: 0.9;
 }
 
 header, .alert {
@@ -59,3 +64,9 @@ body .nav-header {
 }
 
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
