@@ -59,7 +59,7 @@ function renderCarrito(){
                         <img src=${item.img} alt="">
                         <h6 class="title">${item.title}</h6>
                     </td>
-                    <td class=${item.precio}><p>$5</p></td>
+                    <td class=${item.precio}><p>${item.precio}</p></td>
                     <td class="table__cantidad">
                         <input type="number" min="1" value=${item.cantidad} class="input__element">
                         <button class="delete btn btn-danger">x</button>
@@ -133,23 +133,3 @@ window.onload = function(){
         renderCarrito()
     }
 }
-
-//Aquí realicé un fetch pero como la información se mostraba por pantalla decidí no mostrarla
-/*const lista = document.querySelector('section')
-
-fetch('/data.json')
-    .then((res) => res.json())
-    .then((data) => {
-        data.forEach((producto) => {
-            const div = document.createElement('div')
-            div.innerHTML = `
-            <h5>${producto.nombre}</h5>
-            <p>${producto.descripcion}</p>
-            <h5>${producto.precio}</h5>
-            `
-            lista.append(div)
-        })
-    })
-
-console.log(lista)
-*/ 
